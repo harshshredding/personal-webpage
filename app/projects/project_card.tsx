@@ -11,12 +11,11 @@ function Tag({ text }: {text: string}) {
     );
 }
 
-
-export function Card() {
+export function Card(props: ProjectData) {
     return (
         <div className="flex flex-row pt-4">
             <div className="flex-none w-40 h-40 relative">
-                <img src="/composer.png" className="absolute inset-0 w-full h-full object-cover rounded" />
+                <img src={props.image_path} className="absolute inset-0 w-full h-full object-cover rounded" />
             </div>
             <div className="flex flex-col px-4">
                 <h2 className="font-bold">Convolutional Composer Classification</h2>
@@ -38,7 +37,7 @@ export function Card() {
                 <div className="flex flex-wrap items-end">
                     <Tag text="Python"></Tag>
                     <Tag text="C++"></Tag>
-                    <Tag text="Pytorch"></Tag>
+                    <Tag text="PyTorch"></Tag>
                 </div>
             </div>
         </div>
